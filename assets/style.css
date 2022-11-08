@@ -1,0 +1,426 @@
+/*CSS Reset / Normalize*/
+/*Já deixaremos o básico de reset de estilos. Caso queira adicionar mais informações
+coloque nas sessões indicadas*/
+
+* {
+    scroll-behavior: smooth;
+}
+
+:root{
+    /*Insira a variavel das outras cores inspecionando o modelo do figma*/
+    /*Se esforce para trabalhar com variáveis, é uma dica profissional valiosa*/
+   --bg-color: #FFF5FD;
+   --main-color: #335D2D;
+   --second-color: #FE7171;
+   --h2-font: 3rem;
+   --h3-font: 2rem;
+   --p-font: 1rem;
+}
+
+body::-webkit-scrollbar {
+    width: 10px;    
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background-color: var(--main-color);    
+    border-radius: 10px;       
+  }
+
+*::selection {
+    background: var(--main-color);
+    color: #ffffff;
+}
+
+body {
+    box-sizing: border-box;
+    background-color: var(--bg-color);
+    font-family: 'Raleway';
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+}
+ol, ul,li {
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: var(--second-color);
+}
+
+p {
+    color: var(--second-color)
+}
+h3, h2 {
+    color: var(--main-color);
+}
+
+/*Neste desafio, gostariamos que praticassem a metodologia BEM, caso seintam a vontade 
+de utiliza-la. 
+
+Mas o que é o BEM?
+
+BEM (Block, Element, Modifier) ​​é uma abordagem baseada em componentes para o desenvolvimento
+web. A ideia por trás disso é dividir a interface do usuário em blocos independentes.
+Isso torna o desenvolvimento de interface fácil e rápido, mesmo com uma interface
+de usuário complexa, e permite a reutilização de código existente sem copiar e colar.
+
+Link da documentação oficial!
+https://en.bem.info/methodology/quick-start/*/
+
+/*Sessão Menu*/
+
+section.menu{
+    display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+
+header {
+    align-items: center;
+}
+
+.menu-nome img {
+    width: 20px;
+} 
+
+.menu__list {
+    display: flex;
+}
+
+.menu__list a {
+    padding: 20px;
+}
+
+/*Sessão Title*/
+section.title {
+    padding: 3% 8%;
+}
+
+.title__div{
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+}
+
+.title__container {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+}
+
+.title__container h2 {
+    font-size: var(--h2-font);
+    color: var(--main-color);
+}
+
+.title__container h3 {
+    font-size: 1.5rem;
+    font-weight: 100;
+    color: var(--second-color);
+}
+
+.home-img {
+    width: 40%;
+}
+
+.home-img img {
+    width: 90%;
+    border-radius: 50%;
+}
+
+.title__network {
+    display: flex;
+}
+
+.title__network a {
+    padding: 20px;
+}
+
+/*Sessão About*/
+
+section.about{
+    padding: 15px 8%;
+    background: lightcyan;
+}
+
+.about__container {
+    width: 65%;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.about__container h3 {
+    font-size: var(--h3-font);
+}
+
+.about__container p {
+    font-size: var(--p-font);
+}
+
+/*Sessão skills*/
+section.skills{
+    background: var(--bg-color);
+    padding: 20px 8%;
+    text-align: center;
+}
+
+.skills h3 {
+    font-size: var(--h3-font);
+}
+
+.skills__line {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.skills__img {
+    width: 50px;
+}
+
+.skills__box {
+    display: flex;
+    justify-content: space-around;
+    width: 200px;
+}
+
+.skills__box ul li {
+    padding: 20px;
+}
+
+/*Sessão Hobbies*/
+section.hobbies{
+    background: var(--bg-color);
+    padding: 10px 8%;
+    text-align: center;
+}
+
+.hobbies h3 {
+    font-size: var(--h3-font);
+}
+
+.hobbies__line {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hobbies__box {
+    display: flex;
+    justify-content: space-around;
+    width: 200px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.hobbies__box img {
+    width: 60px;
+}
+
+.hobbies__box ul li {
+    padding: 20px;
+}
+
+
+/* Experiência Acadêmica*/
+
+section.academic{
+    padding: 20px 8%;
+    background-color: lightcyan;
+    text-align: center;
+}
+
+.academic h2 {
+    font-size: var(--h3-font);
+}
+
+.academic__courses {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+.academic__courses__item__img img {
+    width: 100px;
+}
+
+/* experiência*/
+
+section.experience{
+    padding: 5%;
+    background: var(--bg-color);
+    text-align: center;
+}
+
+.experience h2 {
+    font-size: var(--h3-font);
+}
+.experience__info h2 {
+    font-size: 1.6rem;
+}
+.experiencie__box {
+    display: flex;
+    padding: 20px;
+}
+
+.experiencie__box img {
+    width: 60%;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+}
+
+.experience__info {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.experience__description button {
+    width: 115px;
+} 
+
+.experience__description button:hover {
+    background-color: #fd8787;
+}
+
+.experience__description button:active {
+    background-color: var(--second-color);
+}
+
+/*Contato*/
+
+section.formcontato{
+    padding: 8%;
+}
+
+.formcontato__contacto {
+    display: flex;
+}
+
+.formcontato--esquerda {
+    align-items: flex-start;
+    width: 50%;
+}
+
+.formcontato--esquerda img {
+    width: 90%;
+}
+
+.formcontato__text {
+    width: 50%;
+}
+.formcontato__form {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+.formcontato__form input {
+    font-family: 'Raleway';
+    color: var(--main-color);
+    margin-bottom: 10px;
+    padding: 15px;
+    border: 0;
+    outline: 0;
+    border-bottom: 2px solid var(--main-color);
+    background-color: transparent;
+}
+/*
+[placeholder]:focus::-webkit-input-placeholder {
+    transition: text-indent 0.4s 0.4s ease; 
+    text-indent: -100%;
+    opacity: 1;
+ }*/
+
+.formcontato__botao {
+    margin-top: 10px;
+}
+
+textarea {
+    color: var(--main-color);
+    padding: 15px;
+    font-family: 'Raleway';
+    border: 0;
+    outline: 0;
+    border-bottom: 2px solid var(--main-color);
+    background-color: transparent;
+    resize: none;
+}
+
+button {
+    border: none;
+    padding: 20px;
+    background-color: var(--second-color);
+    color: var(--bg-color);
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #fd8787;
+}
+
+button:active {
+    background-color: var(--second-color);
+}
+
+::placeholder {
+    color: var(--second-color);
+}
+/*footeer*/
+
+section.footer{
+   padding: 0 8%;
+}
+
+.footer__rodape p {
+    color: var(--main-color);
+}
+
+/* Chegou a hora de se desafiar com a responsividade, 
+utilize como referência os breakpoints @media abaixo*/
+
+/*Tablet*/
+@media (min-width: 768px) {
+
+/* Menu */
+
+/*title*/
+
+/*Skills*/
+
+/*Hobbies*/
+
+/*Experiências acadêmicas*/
+
+/*Expeirência profissional*/
+
+}
+
+/*Mobile*/
+@media (min-width: 425px) {
+
+/*Menu*/
+
+/*Titulo*/
+
+/*Sessão sobre*/
+
+/*Skills*/
+
+/*Hobbies*/
+ 
+/*Formação Acadêmica*/
+
+/*Experiência Profissional*/
+
+ /*Contato*/
+
+/*Footer*/
+
+}
